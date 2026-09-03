@@ -1,0 +1,60 @@
+if [ -f $PIDFILE ]
+        then
+                echo "parando o programa CaixaVerso"
+                rm $PIDFILE
+        else
+                echo "O programa Caixa Verso está parado."#!/usr/bin/env bash
+
+
+PIDFILE="/tmp/caixa.pid"
+
+function iniciar()
+{	
+	ls $PIDFILE
+        if [ $? -eq 0 ]
+        then
+                echo "O programa Caixa Verso já está executando"
+        else    echo "iniciando o programa CaixaVerso"
+                touch /tmp/caixa.pid
+        fi
+}
+function parar()
+{
+if [ -f $PIDFILE ]
+        then
+                echo "parando o programa CaixaVerso"
+                rm $PIDFILE
+        else
+}
+
+start)
+	ls $PIDFILE
+	if [ $? -eq 0 ]
+	then
+		echo "O programa Caixa Verso já está executando"
+	else 	echo "iniciando o programa CaixaVerso"
+		touch /tmp/caixa.pid
+	fi
+;;
+
+stop)
+	if [ -f $PIDFILE ]
+	then
+		echo "parando o programa CaixaVerso"
+		rm $PIDFILE
+	else 
+		echo "O programa Caixa Verso está parado."
+
+fi
+
+;;
+	status)
+	;;
+	restart)  
+*)
+
+echo "Por favor, use o $0 {start|stop}"
+
+;;
+
+esac
